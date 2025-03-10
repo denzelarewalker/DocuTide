@@ -5,11 +5,11 @@ import {
 } from '@docu-tide/core';
 import { Controller } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
-import { DocumentEditor } from './document-editor.service';
+import { DocumentEditorService } from './document-editor.service';
 
 @Controller()
 export class DocumentEditorController {
-  constructor(private readonly documentService: DocumentEditor) {}
+  constructor(private readonly documentService: DocumentEditorService) {}
 
   @MessagePattern(process.env.DOCUMENT_CREATE_TOPIC)
   handleCreate(@Payload() payload: DocumentCreateDto) {

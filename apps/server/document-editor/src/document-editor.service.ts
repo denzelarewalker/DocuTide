@@ -12,7 +12,7 @@ import {
 } from './schemas/documentation.schema';
 
 @Injectable()
-export class DocumentEditor {
+export class DocumentEditorService {
   constructor(
     @InjectModel(Documentation.name)
     private readonly documentationModel: Model<DocumentationDocument>,

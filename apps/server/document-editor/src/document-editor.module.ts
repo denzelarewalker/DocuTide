@@ -3,7 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { MongooseModule } from '@nestjs/mongoose';
 import { DocumentEditorController } from './document-editor.controller';
-import { DocumentEditor } from './document-editor.service';
+import { DocumentEditorService } from './document-editor.service';
 import {
   Documentation,
   DocumentationSchema,
@@ -35,6 +35,6 @@ import {
     ]),
   ],
   controllers: [DocumentEditorController],
-  providers: [DocumentEditor],
+  providers: [DocumentEditorService],
 })
 export class DocumentEditorModule {}
